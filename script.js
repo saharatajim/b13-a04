@@ -17,6 +17,7 @@ let againTotalCount=document.getElementById('againTotalCount')
 
 let totalCardForInterview=[]
 let totalCardForRejected=[]
+let currentStatus='All'
 
 // lets start with "Total".now catch Total er '0' element dhori
 let totalJobCount=document.getElementById('totalCount')
@@ -47,13 +48,49 @@ let allToggleBtn=document.getElementById('allToggleBtn')
 let interviewToggleBtn=document.getElementById('interviewToggleBtn')
 let rejectToggleBtn=document.getElementById('rejectToggleBtn')
 //  bg-white text-gray-500 --->thats for others
-//  bg-blue-500 text-white--->when click any button that will turn this
+//  bg-[#3B82F6] text-white --->when click any button that will turn this
+let emptySection=document.getElementById('emptySection')
+console.log(emptySection)
 
-console.log(allToggleBtn,interviewToggleBtn,rejectToggleBtn)
  function togglingButton(id){
+// lets make all button unclicky color
+    allToggleBtn.classList.remove('text-white','bg-[#3B82F6]')
+    interviewToggleBtn.classList.remove('text-white','bg-[#3B82F6]')
+    rejectToggleBtn.classList.remove('text-white','bg-[#3B82F6]')
 
-allToggleBtn.classList.remove('')
+    allToggleBtn.classList.add('bg-white','text-gray-500')
+    interviewToggleBtn.classList.add('bg-white','text-gray-500')
+    rejectToggleBtn.classList.add('bg-white','text-gray-500')
 
+currentStatus=id
 
+     
+    let selected=document.getElementById(id)
+    selected.classList.remove('bg-white','text-gray-500')
+    selected.classList.add('text-white','bg-[#3B82F6]')
+
+    if(currentStatus=='allToggleBtn'){
+    allCardSection.classList.remove('hidden')
+    emptySection.classList.add('hidden')
+    }
+    if(currentStatus=='interviewToggleBtn'){
+    allCardSection.classList.add('hidden')
+    emptySection.classList.remove('hidden')
+    }
+    if(currentStatus=='rejectToggleBtn'){
+   allCardSection.classList.add('hidden')
+    emptySection.classList.remove('hidden')
+    }
+//  togglig is almost done  
 
  }
+
+
+//  if i press
+// 1.INTERVIEW on the card-->pura card take object er vitore dhore store korbe
+// 2.REJECTED on the card-->
+// 3.delete icon button on the card-->
+
+function renderInterview(){
+    
+}
