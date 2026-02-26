@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-04</title>
 
-    <!-- tailwind&Daisy  -->
+    <!-- tailwind added -->
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
     
-
-
-
     <body  class=" bg-[#F8FAFC] ">
         <!-- counting number section -->
     <header  class="w-[80%]  md: max-w-[1110px] mx-auto bg-[#F8FAFC]  pt-[60px]">
@@ -37,12 +35,12 @@
         <hr class="my-[30px] text-gray-200">
     </header>
 
-    <main   class="w-[80%]  md: max-w-[1110px] mx-auto ">
+    <main  id="mainSection" class="w-[80%]  md: max-w-[1110px] mx-auto ">
 
         <!-- Job Available section -->
         <section  class="space-y-6">
             <div class="flex justify-between">
-                <div class="text-[20px] font-semibold">Available Jobs</div>
+                <div class=" text-[20px] font-semibold">Available Jobs</div>
                 <div>
                       <!-- total count -->
                     <span id="againTotalCount">0</span>
@@ -59,12 +57,12 @@
             </div>
 
         </section>
-        <!-- dynamically this section will be added by JS when ever each card-button pressed -->
-         <section id="default-toggling-section">
+        <!-- dynamically this section will be store each card by JS when ever each card-button pressed -->
+         <section id="showOnSection"  class="hidden">
 
          </section>
 
-        <!-- empty section -->
+        <!-- empty section ,that will be shown by default after pressing any toggle button -->
          <section id="emptySection" class="p-6 bg-white shadow rounded-sm py-[111px] mb-4 hidden">
             <div class="text-center">
                 <div class="flex justify-center">
@@ -82,14 +80,13 @@
             <!-- card-1 -->
              <div class="card p-6  bg-white shadow rounded-sm space-y-6">
                   <div class="flex justify-between items-center">
-                    <div>
+                     <div>
                         <p  class="cardfirstTtext text-[20px] font-semibold">Mobile First Corp</p>
                         <p class="cardSecondText text-gray-400">React Native Developer</p>
-                    </div>
-                    <div>
-                        <button class="remove active:scale-95 "><img src="./reasource/Group 1.png" alt=""></button>
-                    </div>
-                  </div>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
 
                  <div class="space-y-6">
                         <p class="cardThirdText text-gray-400 ">Remote • Full-time •$130,000 - $175,000</p>
@@ -109,16 +106,15 @@
              </div>
      
             <!-- card-2 -->
-             <div class="card p-6 bg-white shadow rounded-sm space-y-6">
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
                   <div class="flex justify-between items-center">
-                    <div>
+                     <div>
                         <p  class="cardfirstTtext text-[20px] font-semibold">WebFlow Agency</p>
                         <p class="cardSecondText text-gray-400">Web Designer & Developerer</p>
-                    </div>
-                    <div>
-                        <button class="remove active:scale-95 "><img src="./reasource/Group 1.png" alt=""></button>
-                    </div>
-                  </div>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
 
                  <div class="space-y-6">
                         <p class="cardThirdText text-gray-400 ">Los Angeles, CA
@@ -142,16 +138,15 @@ Part-time
              </div>
      
             <!-- card-3 -->
-             <div class="card p-6 bg-white shadow rounded-sm space-y-6">
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
                   <div class="flex justify-between items-center">
-                    <div>
+                     <div>
                         <p  class="cardfirstTtext text-[20px] font-semibold">DataViz Solutions</p>
                         <p class="cardSecondText text-gray-400">Data Visualization Specialist</p>
-                    </div>
-                    <div>
-                        <button class="remove active:scale-95 "><img src="./reasource/Group 1.png" alt=""></button>
-                    </div>
-                  </div>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
 
                  <div class="space-y-6">
                         <p class="cardThirdText text-gray-400 ">Boston, MA 
@@ -159,9 +154,8 @@ Part-time
  Full-time
  •
  $125,000 - $165,000</p>
-                         <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
-                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
-</p>
+                        <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
+                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking./p>
                  </div>
 
                 <div class="flex gap-2">
@@ -174,12 +168,162 @@ Part-time
                 </div>
 
              </div>
- 
-     
+            <!-- card-4 -->
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
+                  <div class="flex justify-between items-center">
+                     <div>
+                        <p  class="cardfirstTtext text-[20px] font-semibold">DataViz Solutions</p>
+                        <p class="cardSecondText text-gray-400">Data Visualization Specialist</p>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
 
-     
-    
+                 <div class="space-y-6">
+                        <p class="cardThirdText text-gray-400 ">Boston, MA 
+•
+ Full-time
+ •
+ $125,000 - $165,000</p>
+                        <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
+                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking./p>
+                 </div>
 
+                <div class="flex gap-2">
+                    <!-- clickable button section -->
+                    <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
+                                 " >INTERVIEW</button>
+
+                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
+                                ">REJECTED</button>
+                </div>
+
+             </div>
+            <!-- card-5 -->
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
+                  <div class="flex justify-between items-center">
+                     <div>
+                        <p  class="cardfirstTtext text-[20px] font-semibold">DataViz Solutions</p>
+                        <p class="cardSecondText text-gray-400">Data Visualization Specialist</p>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
+
+                 <div class="space-y-6">
+                        <p class="cardThirdText text-gray-400 ">Boston, MA 
+•
+ Full-time
+ •
+ $125,000 - $165,000</p>
+                        <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
+                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking./p>
+                 </div>
+
+                <div class="flex gap-2">
+                    <!-- clickable button section -->
+                    <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
+                                 " >INTERVIEW</button>
+
+                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
+                                ">REJECTED</button>
+                </div>
+
+             </div>
+            <!-- card-6 -->
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
+                  <div class="flex justify-between items-center">
+                     <div>
+                        <p  class="cardfirstTtext text-[20px] font-semibold">DataViz Solutions</p>
+                        <p class="cardSecondText text-gray-400">Data Visualization Specialist</p>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
+
+                 <div class="space-y-6">
+                        <p class="cardThirdText text-gray-400 ">Boston, MA 
+•
+ Full-time
+ •
+ $125,000 - $165,000</p>
+                        <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
+                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking./p>
+                 </div>
+
+                <div class="flex gap-2">
+                    <!-- clickable button section -->
+                    <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
+                                 " >INTERVIEW</button>
+
+                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
+                                ">REJECTED</button>
+                </div>
+
+             </div>
+            <!-- card-7-->
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
+                  <div class="flex justify-between items-center">
+                     <div>
+                        <p  class="cardfirstTtext text-[20px] font-semibold">DataViz Solutions</p>
+                        <p class="cardSecondText text-gray-400">Data Visualization Specialist</p>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
+
+                 <div class="space-y-6">
+                        <p class="cardThirdText text-gray-400 ">Boston, MA 
+•
+ Full-time
+ •
+ $125,000 - $165,000</p>
+                        <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
+                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking./p>
+                 </div>
+
+                <div class="flex gap-2">
+                    <!-- clickable button section -->
+                    <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
+                                 " >INTERVIEW</button>
+
+                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
+                                ">REJECTED</button>
+                </div>
+
+             </div>
+            <!-- card-8 -->
+             <div class="card p-6  bg-white shadow rounded-sm space-y-6">
+                  <div class="flex justify-between items-center">
+                     <div>
+                        <p  class="cardfirstTtext text-[20px] font-semibold">DataViz Solutions</p>
+                        <p class="cardSecondText text-gray-400">Data Visualization Specialist</p>
+                     </div>
+                    
+                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+                   </div>
+
+                 <div class="space-y-6">
+                        <p class="cardThirdText text-gray-400 ">Boston, MA 
+•
+ Full-time
+ •
+ $125,000 - $165,000</p>
+                        <button class="cardStatusBtn  bg-slate-200 rounded p-2">NOT APPLIED</button>
+                        <p class="cardFourthTtext">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking./p>
+                 </div>
+
+                <div class="flex gap-2">
+                    <!-- clickable button section -->
+                    <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
+                                 " >INTERVIEW</button>
+
+                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
+                                ">REJECTED</button>
+                </div>
+
+             </div>
+     
          </section>
     </main>
 
