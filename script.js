@@ -175,8 +175,10 @@ showOnSection.innerHTML=''
 for(let interviewCard of totalCardForInterview)
     {
 let div=document.createElement('div')
-div.className='card  p-6 bg-white shadow rounded-sm mb-6 '
+
+div.className='card  p-6 bg-white shadow rounded-sm mb-6 space-y-6 '
 div.innerHTML=
+
 `
               <div class="flex justify-between items-center">
                     <div>
@@ -187,10 +189,10 @@ div.innerHTML=
                        <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
                </div>
 
-       <   div class="space-y-6">
+       <div class="space-y-6">
                         <p class="cardThirdText text-gray-400 ">${interviewCard.cardThirdText}</p>
                         
-                       <p class="border rounded-sm p-1 text-green-400 cardStatusBtn">${interviewCard.cardStatusBtn}</p>
+                       <p class="border rounded-sm p-1 text-green-400  w-[95px] cardStatusBtn">${interviewCard.cardStatusBtn}</p>
 
                        <p class="cardFourthTtext">${interviewCard.cardFourthTtext}</p>
         </div>
@@ -219,7 +221,8 @@ showOnSection.innerHTML=''
 for(let rejectCard of totalCardForRejected)
     {
 let div=document.createElement('div')
-div.className='card  p-6 bg-white shadow rounded-sm mb-6 '
+
+div.className='card  p-6 bg-white shadow rounded-sm mb-6 space-y-6 '
 div.innerHTML=
 `
      <div class="flex justify-between items-center">
@@ -234,7 +237,7 @@ div.innerHTML=
        <div class="space-y-6">
                     <p class="cardThirdText text-gray-400 ">${rejectCard.cardThirdText}</p>
 
-                    <p class="border rounded-sm p-1 text-red-400  cardStatusBtn">${rejectCard.cardStatusBtn}</p>
+                    <p class="border rounded-sm p-1 text-red-400 w-[80px]  cardStatusBtn">${rejectCard.cardStatusBtn}</p>
 
                     <p class="cardFourthTtext">${rejectCard.cardFourthTtext}</p>
         </div>
