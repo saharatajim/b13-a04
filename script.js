@@ -31,8 +31,7 @@ let cardFourthTtext=parentNode.querySelector('.cardFourthTtext').innerText
 // modifying the status btn
 let cardStatusBtn=parentNode.querySelector('.cardStatusBtn')
 cardStatusBtn.innerHTML=`
-<button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
-                                 " >INTERVIEW</button>
+<p class="border rounded-sm p-1 text-green-400  w-[95px] cardStatusBtn ">INTERVIEW</p>
 `
 cardStatusBtn.style.backgroundColor="white";
 
@@ -74,8 +73,7 @@ let cardFourthTtext=parentNode.querySelector('.cardFourthTtext').innerText
 let cardStatusBtn=parentNode.querySelector('.cardStatusBtn')
 
 cardStatusBtn.innerHTML=`
- <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
-                                ">REJECTED</button>
+ <p class="border rounded-sm p-1 text-red-400  w-[80px] cardStatusBtn">REJECTED</p>
 `
 cardStatusBtn.style.backgroundColor="white";
 
@@ -180,22 +178,21 @@ let div=document.createElement('div')
 div.className='card  p-6 bg-white shadow rounded-sm mb-6 '
 div.innerHTML=
 `
-     <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center">
                     <div>
                         <p  class="cardfirstTtext text-[20px] font-semibold">${interviewCard.cardfirstTtext}</p>
                         <p class="cardSecondText text-gray-400">${interviewCard.cardSecondText}</p>
                      </div>
                     
                        <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
-        </div>
+               </div>
 
-       <div class="space-y-6">
+       <   div class="space-y-6">
                         <p class="cardThirdText text-gray-400 ">${interviewCard.cardThirdText}</p>
                         
-                       <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
-                                 " >INTERVIEW</button>
+                       <p class="border rounded-sm p-1 text-green-400 cardStatusBtn">${interviewCard.cardStatusBtn}</p>
 
-                        <p class="cardFourthTtext">${interviewCard.cardFourthTtext}</p>
+                       <p class="cardFourthTtext">${interviewCard.cardFourthTtext}</p>
         </div>
 
     <div class="flex gap-2">
@@ -226,29 +223,28 @@ div.className='card  p-6 bg-white shadow rounded-sm mb-6 '
 div.innerHTML=
 `
      <div class="flex justify-between items-center">
-                    <div>
-                        <p  class="cardfirstTtext text-[20px] font-semibold">${rejectCard.cardfirstTtext}</p>
-                        <p class="cardSecondText text-gray-400">${rejectCard.cardSecondText}</p>
-                     </div>
+              <div>    
+                <p  class="cardfirstTtext text-[20px] font-semibold">${rejectCard.cardfirstTtext}</p>
+                <p class="cardSecondText text-gray-400">${rejectCard.cardSecondText}</p>
+             </div>
                     
-                       <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
-        </div>
+             <img class="active:scale-95 cardDeleteBtn" src="./reasource/Group 1.png" alt="">
+             </div>
 
        <div class="space-y-6">
-                        <p class="cardThirdText text-gray-400 ">${rejectCard.cardThirdText}</p>
-                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
-                                ">REJECTED</button>
-                        <p class="cardFourthTtext">${rejectCard.cardFourthTtext}</p>
+                    <p class="cardThirdText text-gray-400 ">${rejectCard.cardThirdText}</p>
+
+                    <p class="border rounded-sm p-1 text-red-400  cardStatusBtn">${rejectCard.cardStatusBtn}</p>
+
+                    <p class="cardFourthTtext">${rejectCard.cardFourthTtext}</p>
         </div>
 
     <div class="flex gap-2">
                     <!-- clickable button section -->
-                       <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn
-                                 " >INTERVIEW</button>
+                       <button class="border rounded-sm p-1 text-green-400  active:scale-95 cardInterviewBtn" >INTERVIEW</button>
 
-                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn 
-                                ">REJECTED</button>
-  </div>
+                    <button class="border rounded-sm p-1 text-red-400 active:scale-95 cardRejectedBtn  ">REJECTED</button>
+   </div>
 
 `
 showOnSection.appendChild(div)
