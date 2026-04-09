@@ -1,31 +1,53 @@
-1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+# 👔 Job Tracking Dashboard
 
-ans:
-A.getELementByID:Find One element by id
-B.getElementsByClassName:finds multiple elements with the C.same class
-D.querySelector:finds only the first element that matches the same class
-E.querySelectorAll:ind all element that matches is,class or other selectors 
+A dynamic and responsive Job Management system built to track job applications. This project allows users to manage their application journey by moving job cards between "All", "Interview", and "Rejected" categories while keeping a real-time count of each status.
 
-2. How do you create and insert a new element into the DOM?
+## 🚀 Live Demo
+**[View Project Live:(https://saharatajim.github.io/job-tracking-project/
 
-ans:
-A.we use document.createElement("tagName") to create any element.
-B.for inserting we use parent.appendChild(new Element)
+---
 
+## 🧐 Overview
+The **Job Tracking Dashboard** is designed to help job seekers stay organized. Users can view a list of job opportunities and update their status with a single click. The application handles complex state changes, such as toggling between interview and rejection statuses, while automatically updating the dashboard metrics.
 
-3. What is Event Bubbling? And how does it work?
+## ✨ Key Features
+* **Dynamic Status Tracking:** Effortlessly move jobs between **Interview** and **Rejected** tabs.
+* **Real-time Counters:** The dashboard header updates automatically to show the total count of jobs in each category.
+* **Smart Toggle Logic:** Ability to switch a job from 'Interview' to 'Rejected' (or vice versa), which automatically adjusts the tab location and counts.
+* **Empty State Handling:** When no jobs are available in the Interview or Rejected tabs, a custom "No jobs Available" message is displayed with a supporting icon.
+* **Delete Functionality:** Remove job cards entirely from the UI, with automatic deduction from all relevant counters.
+* **Mobile-First Design:** Fully responsive layout built with Tailwind CSS/DaisyUI for a seamless experience on all devices.
+* **No Placeholder Content:** All job descriptions and data are meaningful and realistic.
 
-ans:
-Event Bubbling means when an event happens on child element,it first runs on that element then moves up step by step to its parenst,grandparents and so on.
+## 🛠️ Technology Stack
+* **Structure:** HTML5
+* **Styling:** CSS3 / Tailwind CSS / DaisyUI
+* **Logic:** Vanilla JavaScript (ES6+)
 
-4. What is Event Delegation in JavaScript? Why is it useful?
+## ⚙️ Project Structure & Data
+Each job card contains:
+- **Company Name & Position**
+- **Location & Job Type** (e.g., Remote, On-site)
+- **Salary Details**
+- **Meaningful Job Descriptions**
 
-ans:
-Event Delagation means putting one event listener on a parent element instead of many listeners on each child.
-also it is useful for saving memory,less code,easier to manage dynamic element.
+---
 
+## ⚙️ Installation & Local Setup
 
-5. What is the difference between preventDefault() and stopPropagation() methods?
+To run this project on your local machine:
 
-ans:
-A.preventDefault(),it basically stops the elements default action on the other hand stopPropagation() stops the event from bubbling up to parent elements
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/saharatajim/job-tracking-project.git](https://github.com/saharatajim/job-tracking-project.git)
+    ```
+2.  **Navigate to the directory:**
+    ```bash
+    cd job-tracking-project
+    ```
+3.  **Run the application:**
+    Open `index.html` in your browser, or use the **Live Server** extension in VS Code.
+
+---
+
+<p align="center"><b>⭐ From Sahara Tajim</b><br/><i>CSE Student & Aspiring MERN Stack Developer</i></p>
